@@ -9,7 +9,7 @@ Ex: `helloWorld.tys`
 ## Running your program
 To run your program, type into terminal or command prompt in the directory of the TernaryScript interpreter the following command
 <br>
-`./TernaryScript ./<filename>.tys`
+`./TernaryScript <filename>.tys`
 # Basics
 ## Print
 Print plain text
