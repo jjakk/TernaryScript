@@ -16,3 +16,7 @@ Print plain text
 ```
 PRINT|Hello World|NULL
 ```
+Print variable
+```
+PRINT_VARIABLE|variable_name|NULL
+```
