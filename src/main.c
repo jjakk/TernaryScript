@@ -4,7 +4,7 @@
 #include "./lexer/lexer.c"
 #include "./parser/parser.c"
 
-void run(char line_str[LINE_MAX_LENGTH]);
+int run(int lineNum, char line_str[LINE_MAX_LENGTH]);
 
 int main(int argumentCount, char *arguments[])  {
    
@@ -15,9 +15,10 @@ int main(int argumentCount, char *arguments[])  {
    FILE * pFile = fopen(fileName, "r");
    char read_line[LINE_MAX_LENGTH];
 
-   int i = 0;
+   int lineNumber = 1;
    while(fgets(read_line, LINE_MAX_LENGTH, pFile)) {
-      run(read_line);
+      if(run(lineNumber, read_line) == 1) return 1;
+      lineNumber++;
    }
 
    fclose(pFile);
@@ -25,7 +26,7 @@ int main(int argumentCount, char *arguments[])  {
    return 0;
 }
 
-void run(char line_str[LINE_MAX_LENGTH]) {
-   struct Line line = lexify(line_str);
-   parse(line);
+int run(int lineNum, char line_str[LINE_MAX_LENGTH]) {
+   struct Line line = lexify(lineNum, line_str);
+   return parse(line);
 }
