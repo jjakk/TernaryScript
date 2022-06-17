@@ -7,7 +7,7 @@ To make your first TernaryScript program create a file with the `.tys` extention
 <br>
 Ex: `helloWorld.tys`
 ## Running your program
-To run your new script type into terminal or command prompt in the directory of the TernaryScript interpreter the following command
+To run your program, type into terminal or command prompt in the directory of the TernaryScript interpreter the following command
 <br>
 `./TernaryScript ./<filename>.tys`
 # Basics
