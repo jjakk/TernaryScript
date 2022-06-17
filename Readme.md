@@ -10,3 +10,9 @@ Ex: `helloWorld.tys`
 To run your new script type into terminal or command prompt in the directory of the TernaryScript interpreter the following command
 <br>
 `./TernaryScript ./<filename>.tys`
+# Basics
+## Print
+Print plain text
+```
+PRINT|Hello World|NULL
+```
