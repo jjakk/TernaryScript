@@ -1,0 +1,5 @@
+PRINT|Hello World\n|NULL
+SET_VARIABLE|cool number|123
+PRINT|My favorite number is |NULL
+PRINT_VARIABLE|cool number|NULL
+PRINT|.\n|NULL
