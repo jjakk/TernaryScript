@@ -1,7 +1,7 @@
 ![TernaryScript](./logo/logo.svg)
 # Getting Started
 ## Install
-Install the TernaryScript interpreter executable here
+To install the TernaryScript interpreter compile `main.c` in the `src` directory. The resulting executable is the TernaryScript interpreter
 ## File naming
 To make your first TernaryScript program create a file with the `.tys` extentions.
 <br>
