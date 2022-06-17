@@ -14,6 +14,7 @@ int main(int argumentCount, char *arguments[])  {
    FILE * pFile = fopen(fileName, "r");
    char read_line[LINE_MAX_LENGTH];
 
+   int i = 0;
    while(fgets(read_line, LINE_MAX_LENGTH, pFile)) {
       run(read_line);
    }
