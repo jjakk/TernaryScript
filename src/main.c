@@ -2,6 +2,7 @@
 #include "./misc/constants.h"
 #include "./misc/validArguments.c"
 #include "./lexer/lexer.c"
+#include "./parser/parser.c"
 
 void run(char line_str[LINE_MAX_LENGTH]);
 
@@ -26,4 +27,5 @@ int main(int argumentCount, char *arguments[])  {
 
 void run(char line_str[LINE_MAX_LENGTH]) {
    struct Line line = lexify(line_str);
+   parse(line);
 }

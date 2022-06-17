@@ -8,7 +8,6 @@ struct Line lexify(char line_str[LINE_MAX_LENGTH]){
     struct Line line = {"", "", ""};
     for(i = 0; i < lineLength; i++){
         char currentChar = line_str[i];
-        printf("%c", currentChar);
         if(currentChar == DIVIDING_CHARACTER){
             operationNumber++;
         }
