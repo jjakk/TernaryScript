@@ -9,6 +9,7 @@ void createVariable(struct Line line){
 int determineType(char value[LINE_MAX_LENGTH]){
     if(strcmp(value, "TRUE") == 0 || strcmp(value, "FALSE") == 0){
         return 0;
+    }
     // Check int
     // Check float
     else {
