@@ -11,4 +11,5 @@ struct Variable{
     char *name;
     char *value;
     int type;
+    struct Variable *next;
 };
