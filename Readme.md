@@ -20,3 +20,12 @@ Print variable
 ```
 PRINT_VARIABLE|variable_name|NULL
 ```
+## Variables
+Create a variable
+```
+CREATE_VARIABLE|variable_name|variable_value
+```
+Set a variable
+```
+SET_VARIABLE|variable_name|new_value
+```
