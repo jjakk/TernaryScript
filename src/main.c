@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "./misc/constants.h"
 #include "./misc/validArguments.c"
+#include "./structs/Line.c"
 #include "./lexer/lexer.c"
 #include "./parser/parser.c"
 
@@ -17,7 +18,9 @@ int main(int argumentCount, char *arguments[])  {
 
    int lineNumber = 1;
    while(fgets(read_line, LINE_MAX_LENGTH, pFile)) {
-      if(run(lineNumber, read_line) == 1) return 1;
+      if(strlen(read_line) > 2){
+         if(run(lineNumber, read_line) == 1) return 1;
+      }
       lineNumber++;
    }
 
