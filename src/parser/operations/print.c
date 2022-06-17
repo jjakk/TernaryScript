@@ -1,4 +1,4 @@
 
-void printDefault(struct Line line){
+void printDefault(Line line){
     printf("%s\n", line.secondOperand);
 }

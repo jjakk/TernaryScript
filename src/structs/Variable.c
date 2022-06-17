@@ -7,9 +7,16 @@ Variable types by int value
 3 - string
 */
 
-struct Variable{
+typedef struct Variable{
     char *name;
-    char *value;
     int type;
+    char *value;
     struct Variable *next;
+} Variable;
+
+Variable rootVariable = {
+    NULL,
+    0,
+    NULL,
+    NULL
 };

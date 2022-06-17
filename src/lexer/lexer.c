@@ -1,11 +1,11 @@
 #include <string.h>
 
-struct Line lexify(int lineNum, char line_str[LINE_MAX_LENGTH]){
+Line lexify(int lineNum, char line_str[LINE_MAX_LENGTH]){
     int i;
     int operationNumber = 0;
     int lineLength = strlen(line_str);
-    struct Line line = {lineNum, "", "", ""};
-    for(i = 0; i < lineLength; i++){
+    Line line = {lineNum, "", "", ""};
+    for(i = 0; i < lineLength-1; i++){
         char currentChar = line_str[i];
         if(currentChar == DIVIDING_CHARACTER){
             operationNumber++;
