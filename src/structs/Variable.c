@@ -14,26 +14,36 @@ typedef struct Variable{
     struct Variable *next;
 } Variable;
 
-Variable rootVariable = {
-    NULL,
-    0,
-    NULL,
-    NULL
-};
+Variable *pRootVariable = NULL;
+
+void initVariables(){
+    pRootVariable = (Variable *) malloc(sizeof(Variable));
+}
+
+void closeVariables(){
+    Variable *pCurrentVariable = pRootVariable;
+    while(pCurrentVariable != NULL){
+        Variable *pNextVariable = pCurrentVariable->next;
+        printf("Freeing |%s:%s| at %p\n", pCurrentVariable->name, pCurrentVariable->value, pCurrentVariable);
+        free(pCurrentVariable);
+        pCurrentVariable = pNextVariable;
+    }
+}
 
 void appendVariable(Variable var){
-    Variable currentVar = rootVariable;
-    while(currentVar.next != NULL){
-        currentVar = *currentVar.next;
+    Variable *pCurrentVar = pRootVariable;
+    while(pCurrentVar->next != NULL){
+        pCurrentVar = pCurrentVar->next;
     }
-    currentVar.next = &var;
+    pCurrentVar->next = (Variable *) malloc(sizeof(Variable));
+    *pCurrentVar->next = var;
 }
 
 Variable getVariable(char line[LINE_MAX_LENGTH]){
-    Variable currentVariable = rootVariable;
-    while(currentVariable.next != NULL){
-        currentVariable = *currentVariable.next;
-        if(strcmp(currentVariable.name, line) == 0) return currentVariable;
+    Variable *pCurrentVar = pRootVariable;
+    while(pCurrentVar->next != NULL){
+        pCurrentVar = pCurrentVar->next;
+        if(strcmp(pCurrentVar->name, line) == 0) return *pCurrentVar;
     }
-    return rootVariable;
+    return *pRootVariable;
 }

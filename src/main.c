@@ -10,8 +10,9 @@
 
 int run(int lineNum, char line_str[LINE_MAX_LENGTH]);
 
-int main(int argumentCount, char *arguments[])  {
-   
+int main(int argumentCount, char *arguments[]){
+   initVariables();
+      
    if(!validArguments(argumentCount, arguments)) return 1;
    char *fileName = arguments[1];
    
@@ -33,6 +34,7 @@ int main(int argumentCount, char *arguments[])  {
    }
 
    fclose(pFile);
+   closeVariables();
 
    return 0;
 }
