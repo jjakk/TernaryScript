@@ -1,4 +1,3 @@
-#include <string.h>
 
 Line lexify(int lineNum, char line_str[LINE_MAX_LENGTH]){
     int i;

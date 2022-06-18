@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "./misc/constants.h"
 #include "./misc/validArguments.c"
 #include "./structs/Line.c"

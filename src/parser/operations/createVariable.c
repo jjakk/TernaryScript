@@ -4,7 +4,6 @@ int isBoolean(char value[LINE_MAX_LENGTH]);
 int isInt(char value[LINE_MAX_LENGTH]);
 int isFloat(char value[LINE_MAX_LENGTH]);
 int isDigit(char character);
-void appendToLastVariable(Variable lastVar, Variable newVar);
 
 void createVariable(Line line){
     char *variableName = line.secondOperand;
@@ -15,16 +14,7 @@ void createVariable(Line line){
         line.thirdOperand,
         NULL
     };
-    appendToLastVariable(rootVariable, newVariable);
-}
-
-void appendToLastVariable(Variable lastVar, Variable newVar){
-    if(lastVar.next == NULL){
-        lastVar.next = &newVar;
-    }
-    else {
-        appendToLastVariable(lastVar, *lastVar.next);
-    }
+    appendVariable(newVariable);
 }
 
 int determineType(char value[LINE_MAX_LENGTH]){
