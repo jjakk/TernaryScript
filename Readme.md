@@ -33,41 +33,14 @@ Take user input and store to a variable
 ```
 INPUT_VARIABLE|variable_name
 ```
-Set a variable
+### Modification
+Set a variable equal to a static value (in development)
 ```
-SET_VARIABLE|variable_name|new_value
+MODIFY_VARIABLE:SET:STATIC|variable_name|new_value
 ```
-Add a static value to a variable (in development)
+Set a variable equal to the value of another variable (in development)
 ```
-ADD_TO_VARIABLE:STATIC|variable_name|static_value
-```
-Add a variable to another variable (in development)
-```
-ADD_TO_VARIABLE:VARIABLE|variable_name|other_variable_name
-```
-Substract a static value from a variable (in development)
-```
-SUBTRACT_FROM_VARIABLE:STATIC|variable_name|static_value
-```
-Substract a variable from another variable (in development)
-```
-SUBTRACT_FROM_VARIABLE:VARIABLE|variable_name|other_variable_name
-```
-Multiply a variable by a static value (in development)
-```
-MULTIPLY_VARIABLE:STATIC|variable_name|static_value
-```
-Multiply a variable by another variable (in development)
-```
-MULTIPLY_VARIABLE:VARIABLE|variable_name|other_variable_name
-```
-Divide a variable by a static value (in development)
-```
-DIVIDE_VARIABLE:STATIC|variable_name|static_value
-```
-Divide a variable by another variable (in development)
-```
-DIVIDE_VARIABLE:VARIABLE|variable_name|other_variable_name
+MODIFY_VARIABLE:SET:VARIABLE|variable_name|other_variable_name
 ```
 ## Comments
 To comment a line of code, simply start the line with `//` like so
