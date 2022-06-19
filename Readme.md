@@ -16,7 +16,7 @@ Print plain text
 ```
 PRINT|Hello World|
 ```
-Print newline (`\n`) character
+Print newline `\n` character
 ```
 PRINT_NEW_LINE||
 ```
