@@ -29,13 +29,29 @@ Create a variable
 ```
 CREATE_VARIABLE|variable_name|variable_value
 ```
+Take user input and store to a variable
+```
+INPUT_VARIABLE|variable_name
+```
 Set a variable
 ```
 SET_VARIABLE|variable_name|new_value
 ```
-Take user input and store to a variable
+Add a static value to a variable (in development)
 ```
-INPUT_VARIABLE|variable_name
+ADD_TO_VARIABLE:STATIC|variable_name|static_value
+```
+Add a variable to another variable (in development)
+```
+ADD_TO_VARIABLE:VARIABLE|variable_name|other_variable_name
+```
+Substract a static value from a variable (in development)
+```
+SUBTRACT_FROM_VARIABLE:STATIC|variable_name|static_value
+```
+Substract a variable from another variable (in development)
+```
+SUBTRACT_FROM_VARIABLE:VARIABLE|variable_name|other_variable_name
 ```
 ## Comments
 To comment a line of code, simply start the line with `//` like so
