@@ -33,7 +33,7 @@ Set a variable
 ```
 SET_VARIABLE|variable_name|new_value
 ```
-Take user input and store to a variable (in development)
+Take user input and store to a variable
 ```
 INPUT_VARIABLE|variable_name
 ```
