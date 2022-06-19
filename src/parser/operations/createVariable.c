@@ -42,7 +42,20 @@ int isInt(char value[LINE_MAX_LENGTH]){
 }
 
 int isFloat(char value[LINE_MAX_LENGTH]){
-    return 0;
+    int foundPeriod = 0;
+    int i;
+    for(i = 0; i < strlen(value); i++){
+        char currentChar = value[i];
+        if(currentChar == '.'){
+            if(foundPeriod == 1) return 1;
+            else foundPeriod = 1;
+        } else if(currentChar == '-' || currentChar == '+'){
+            if(i != 0) return 0;
+        } else if(isDigit(currentChar) == 0) {
+            return 0;
+        }
+    }
+    return 1;
 }
 
 int isDigit(char character){
