@@ -1,8 +1,8 @@
 
 int printVariable(Line line){
     char *variableName = line.secondOperand;
-    Variable variable = getVariable(variableName);
-    if(&variable == pRootVariable) return 1;
-    printf("%s\n", variable.name);
+    Variable *variable = getVariable(variableName);
+    if(variable == pRootVariable) return 1;
+    printf("%s\n", variable->value);
     return 0;
 }

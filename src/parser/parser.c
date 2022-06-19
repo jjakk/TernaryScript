@@ -4,7 +4,10 @@
 
 int parse(Line line){
     char *operation = line.firstOperand;
-    if(strcmp(operation, "PRINT") == 0){
+    if(operation[0] == '/' && operation[1] == '/'){
+        return 0;
+    }
+    else if(strcmp(operation, "PRINT") == 0){
         printDefault(line);
     } else if(strcmp(operation, "CREATE_VARIABLE") == 0){
         createVariable(line);

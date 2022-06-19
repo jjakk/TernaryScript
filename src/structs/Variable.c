@@ -30,20 +30,20 @@ void closeVariables(){
     }
 }
 
-void appendVariable(Variable var){
-    Variable *pCurrentVar = pRootVariable;
-    while(pCurrentVar->next != NULL){
-        pCurrentVar = pCurrentVar->next;
+void appendVariable(Variable variable){
+    Variable *pCurrentVariable = pRootVariable;
+    while(pCurrentVariable->next != NULL){
+        pCurrentVariable = pCurrentVariable->next;
     }
-    pCurrentVar->next = (Variable *) malloc(sizeof(Variable));
-    *pCurrentVar->next = var;
+    pCurrentVariable->next = (Variable *) malloc(sizeof(Variable));
+    *pCurrentVariable->next = variable;
 }
 
-Variable getVariable(char line[LINE_MAX_LENGTH]){
-    Variable *pCurrentVar = pRootVariable;
-    while(pCurrentVar->next != NULL){
-        pCurrentVar = pCurrentVar->next;
-        if(strcmp(pCurrentVar->name, line) == 0) return *pCurrentVar;
+Variable *getVariable(char line[LINE_MAX_LENGTH]){
+    Variable *pCurrentVariable = pRootVariable;
+    while(pCurrentVariable->next != NULL){
+        pCurrentVariable = pCurrentVariable->next;
+        if(strcmp(pCurrentVariable->name, line) == 0) return pCurrentVariable;
     }
-    return *pRootVariable;
+    return pRootVariable;
 }
