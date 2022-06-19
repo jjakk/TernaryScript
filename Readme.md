@@ -53,6 +53,22 @@ Substract a variable from another variable (in development)
 ```
 SUBTRACT_FROM_VARIABLE:VARIABLE|variable_name|other_variable_name
 ```
+Multiply a variable by a static value (in development)
+```
+MULTIPLY_VARIABLE:STATIC|variable_name|static_value
+```
+Multiply a variable by another variable (in development)
+```
+MULTIPLY_VARIABLE:VARIABLE|variable_name|other_variable_name
+```
+Divide a variable by a static value (in development)
+```
+DIVIDE_VARIABLE:STATIC|variable_name|static_value
+```
+Divide a variable by another variable (in development)
+```
+DIVIDE_VARIABLE:VARIABLE|variable_name|other_variable_name
+```
 ## Comments
 To comment a line of code, simply start the line with `//` like so
 ```
