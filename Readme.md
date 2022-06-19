@@ -25,7 +25,7 @@ Create a variable
 ```
 CREATE_VARIABLE|variable_name|variable_value
 ```
-Set a variable (In development)
+Set a variable
 ```
 SET_VARIABLE|variable_name|new_value
 ```
