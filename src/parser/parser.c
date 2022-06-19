@@ -1,6 +1,6 @@
-
 #include "./operations/createVariable.c"
 #include "./operations/setVariable.c"
+#include "./operations/inputVariable.c"
 #include "./operations/print.c"
 
 int parse(Line line){
@@ -12,6 +12,11 @@ int parse(Line line){
         createVariable(line);
     } else if(strcmp(operation, "SET_VARIABLE") == 0){
         if(setVariable(line) == 1){
+            printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);
+            return 1;
+        }
+    } else if(strcmp(operation, "INPUT_VARIABLE") == 0){
+        if(inputVariable(line) == 1){
             printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);
             return 1;
         }

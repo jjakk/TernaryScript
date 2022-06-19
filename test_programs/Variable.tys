@@ -14,3 +14,9 @@ PRINT_NEW_LINE||
 PRINT|My string variable value is |
 PRINT_VARIABLE|myString||
 PRINT_NEW_LINE||
+CREATE_VARIABLE|userInput|
+PRINT|Enter the value of a new string: |
+INPUT_VARIABLE|userInput|
+PRINT|The value you inputted was |
+PRINT_VARIABLE|userInput|
+PRINT_NEW_LINE||
