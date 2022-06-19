@@ -35,7 +35,7 @@ SET_VARIABLE|variable_name|new_value
 ```
 Take user input and store to a variable
 ```
-INPUT_VARIABLE|variable_name
+INPUT_VARIABLE|variable_name|
 ```
 ## Comments
 To comment a line of code, simply start the line with `//` like so
