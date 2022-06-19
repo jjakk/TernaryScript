@@ -16,12 +16,12 @@ Print plain text
 ```
 PRINT|Hello World|NULL
 ```
-Print variable (In development)
+Print variable
 ```
 PRINT_VARIABLE|variable_name|NULL
 ```
 ## Variables
-Create a variable (In development)
+Create a variable
 ```
 CREATE_VARIABLE|variable_name|variable_value
 ```
