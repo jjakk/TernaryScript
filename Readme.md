@@ -11,6 +11,15 @@ To run your program, type into terminal or command prompt in the directory of th
 <br>
 `./TernaryScript <filename>.tys`
 # Basics
+## Variables
+Create a variable
+```
+CREATE_VARIABLE|variable_name|variable_value
+```
+Set a variable
+```
+SET_VARIABLE|variable_name|new_value
+```
 ## Print
 Print plain text
 ```
@@ -24,14 +33,10 @@ Print variable
 ```
 PRINT_VARIABLE|variable_name|
 ```
-## Variables
-Create a variable
+## Input
+Take user input and store to a variable (in development)
 ```
-CREATE_VARIABLE|variable_name|variable_value
-```
-Set a variable
-```
-SET_VARIABLE|variable_name|new_value
+INPUT_VARIABLE|variable_name
 ```
 ## Comments
 To comment a line of code, simply start the line with `//` like so
