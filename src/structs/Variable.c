@@ -41,9 +41,13 @@ void appendVariable(Variable variable){
         pCurrentVariable = pCurrentVariable->next;
     }
     pCurrentVariable->next = (Variable *) malloc(sizeof(Variable));
-    *pCurrentVariable->next = variable;
-    printf("________\n");
-    printVariables();
+    
+    pCurrentVariable->next->type = variable.type;
+
+    pCurrentVariable->next->name = (char *) malloc(LINE_MAX_LENGTH);
+    pCurrentVariable->next->value = (char *) malloc(LINE_MAX_LENGTH);
+    strcpy(pCurrentVariable->next->name, variable.name);
+    strcpy(pCurrentVariable->next->value, variable.value);
 }
 
 Variable *getVariable(char line[LINE_MAX_LENGTH]){
