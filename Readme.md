@@ -29,3 +29,8 @@ Set a variable (In development)
 ```
 SET_VARIABLE|variable_name|new_value
 ```
+## Comments
+To comment a line of code, simply start the line with `//` like so
+```
+//PRINT|Hello World|NULL
+```
