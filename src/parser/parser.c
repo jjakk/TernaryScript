@@ -10,11 +10,25 @@ int parse(Line line){
     }
     else if(strcmp(operation, "CREATE_VARIABLE") == 0){
         createVariable(line);
-    } else if(strcmp(operation, "SET_VARIABLE") == 0){
-        if(setVariable(line) == 1){
+    } else if(strcmp(operation, "MODIFY_VARIABLE:SET:STATIC") == 0){
+        if(setVariableStatic(line) == 1){
             printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);
             return 1;
         }
+    } else if(strcmp(operation, "MODIFY_VARIABLE:SET:VARIABLE") == 0){
+        int error = setVariableVariable(line);
+        if(error == 1){
+            printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);
+            return 1;
+        } else if(error == 2){
+            printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.thirdOperand, line.number);
+            return 1;
+        } else if(error == 3){
+            printf("\nERROR: Variable type collision on Line #%i\n", line.number);
+            return 1;
+        }
+    } else if(strcmp(operation, "ADD_TO_VARIABEL") == 0){
+
     } else if(strcmp(operation, "INPUT_VARIABLE") == 0){
         if(inputVariable(line) == 1){
             printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);

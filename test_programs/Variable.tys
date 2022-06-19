@@ -2,21 +2,21 @@ CREATE_VARIABLE|myBoolean|TRUE
 CREATE_VARIABLE|myInt|10
 CREATE_VARIABLE|myFloat|4.7
 CREATE_VARIABLE|myString|hello World
-PRINT|My boolean variable value is |
-PRINT_VARIABLE|myBoolean||
-PRINT_NEW_LINE||
-PRINT|My integer variable value is |
-PRINT_VARIABLE|myInt||
-PRINT_NEW_LINE||
+PRINT|My boolean variable value is 
+PRINT_VARIABLE|myBoolean
+PRINT_NEW_LINE
+PRINT|My integer variable value is 
+PRINT_VARIABLE|myInt
+PRINT_NEW_LINE
 PRINT|My floating point variable value is |
-PRINT_VARIABLE|myFloat||
-PRINT_NEW_LINE||
-PRINT|My string variable value is |
-PRINT_VARIABLE|myString||
-PRINT_NEW_LINE||
-CREATE_VARIABLE|userInput|
-PRINT|Enter the value of a new string: |
-INPUT_VARIABLE|userInput|
-PRINT|The value you inputted was |
-PRINT_VARIABLE|userInput|
-PRINT_NEW_LINE||
+PRINT_VARIABLE|myFloat
+PRINT_NEW_LINE
+PRINT|My string variable value is 
+PRINT_VARIABLE|myString
+PRINT_NEW_LINE
+CREATE_VARIABLE|userInput
+PRINT|Enter the value of a new string: 
+INPUT_VARIABLE|userInput
+PRINT|The value you inputted was 
+PRINT_VARIABLE|userInput
+PRINT_NEW_LINE
