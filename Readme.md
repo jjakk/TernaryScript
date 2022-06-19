@@ -14,31 +14,36 @@ To run your program, type into terminal or command prompt in the directory of th
 ## Print
 Print plain text
 ```
-PRINT|Hello World|
+PRINT|Hello World
 ```
 Print newline `\n` character
 ```
-PRINT_NEW_LINE||
+PRINT_NEW_LINE
 ```
 Print variable
 ```
-PRINT_VARIABLE|variable_name|
+PRINT_VARIABLE|variable_name
 ```
 ## Variables
 Create a variable
 ```
 CREATE_VARIABLE|variable_name|variable_value
 ```
-Set a variable
-```
-SET_VARIABLE|variable_name|new_value
-```
-Take user input and store to a variable (in development)
+Take user input and store to a variable
 ```
 INPUT_VARIABLE|variable_name
+```
+### Modification
+Set a variable equal to a static value (in development)
+```
+MODIFY_VARIABLE:SET:STATIC|variable_name|new_value
+```
+Set a variable equal to the value of another variable (in development)
+```
+MODIFY_VARIABLE:SET:VARIABLE|variable_name|other_variable_name
 ```
 ## Comments
 To comment a line of code, simply start the line with `//` like so
 ```
-//PRINT|Hello World|
+//PRINT|Hello World
 ```
