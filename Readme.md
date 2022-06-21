@@ -16,13 +16,13 @@ Print plain text
 ```
 PRINT:STATIC|Hello World
 ```
-Print newline `\n` character
-```
-PRINT:NEW_LINE
-```
 Print a variable's value
 ```
 PRINT:VARIABLE|variable_name
+```
+Print newline `\n` character
+```
+PRINT:NEW_LINE
 ```
 ## Variables
 Create a variable
