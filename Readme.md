@@ -34,13 +34,21 @@ Take user input and store to a variable
 INPUT_VARIABLE|variable_name
 ```
 ### Modification
-Set a variable equal to a static value (in development)
+Set a variable equal to a static value
 ```
 MODIFY_VARIABLE:SET:STATIC|variable_name|new_value
 ```
-Set a variable equal to the value of another variable (in development)
+Set a variable equal to the value of another variable
 ```
 MODIFY_VARIABLE:SET:VARIABLE|variable_name|other_variable_name
+```
+Add a static value to a variable (in development)
+```
+MODIFY_VARIABLE:ADD:STATIC|variable_name|static_value
+```
+Add a variable to another variable (in development)
+```
+MODIFY_VARIABLE:ADD:VARIABLE|variable_name|other_variable_name
 ```
 ## Comments
 To comment a line of code, simply start the line with `//` like so
