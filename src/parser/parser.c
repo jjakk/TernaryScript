@@ -1,5 +1,6 @@
 #include "./operations/createVariable.c"
 #include "./operations/setVariable.c"
+#include "./operations/addVariable.c"
 #include "./operations/inputVariable.c"
 #include "./operations/print.c"
 
@@ -27,8 +28,15 @@ int parse(Line line){
             printf("\nERROR: Variable type collision on Line #%i\n", line.number);
             return 1;
         }
-    } else if(strcmp(operation, "ADD_TO_VARIABEL") == 0){
-
+    } else if(strcmp(operation, "MODIFY_VARIABLE:ADD:STATIC") == 0){
+        int error = addVariableStatic(line);
+        if(error == 1){
+            printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);
+            return 1;
+        } else if(error == 2){
+            printf("\nERROR: Invalid value type on Line #%i\n", line.number);
+            return 1;
+        }
     } else if(strcmp(operation, "INPUT_VARIABLE") == 0){
         if(inputVariable(line) == 1){
             printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);

@@ -7,7 +7,7 @@ Variable types by int value
 3 - string
 */
 
-void printVariables();
+int stringToBoolean(char *value);
 
 typedef struct Variable{
     char *name;
@@ -17,6 +17,43 @@ typedef struct Variable{
 } Variable;
 
 Variable *pRootVariable = NULL;
+
+
+// Variable value functions
+
+void addIntegers(Variable *variable, char *value){
+    int newValue = atoi(variable->value) + atoi(value);
+    sprintf(variable->value, "%d", newValue);
+}
+
+void addBooleans(Variable *variable, char *value){
+    int variableValue = stringToBoolean(variable->value);
+    int booleanValue = stringToBoolean(value);
+    if(variableValue == 1 || booleanValue == 1){
+        strcpy(variable->value, "TRUE");
+    } else {
+        strcpy(variable->value, "FALSE");
+    }
+}
+
+void addFloats(Variable *variable, char *value){
+    float newValue = atof(variable->value) + atof(value);
+    sprintf(variable->value, "%f", newValue);
+}
+
+void addStrings(Variable *variable, char *value){
+    strcat(variable->value, value);
+}
+
+int stringToBoolean(char *value){
+    if(strcmp(value, "TRUE") == 0){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+// Variable list functions
 
 void initVariables(){
     pRootVariable = (Variable *) malloc(sizeof(Variable));
@@ -57,12 +94,4 @@ Variable *getVariable(char line[LINE_MAX_LENGTH]){
         if(strcmp(pCurrentVariable->name, line) == 0) return pCurrentVariable;
     }
     return pRootVariable;
-}
-
-void printVariables(){
-    Variable *pCurrentVariable = pRootVariable;
-    while(pCurrentVariable->next != NULL){
-        pCurrentVariable = pCurrentVariable->next;
-        printf("%s\n", pCurrentVariable->name);
-    }
 }
