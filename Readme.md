@@ -50,6 +50,14 @@ Add a variable to another variable
 ```
 MODIFY_VARIABLE:ADD:VARIABLE|variable_name|other_variable_name
 ```
+Substract a static value from a variable (in development)
+```
+MODIFY_VARIABLE:SUBTRACT:STATIC|variable_name|static_value
+```
+Subtract a variable from another variable (in development)
+```
+MODIFY_VARIABLE:SUBTRACT:VARIABLE|variable_name|other_variable_name
+```
 ## Comments
 To comment a line of code, simply start the line with `//` like so
 ```
