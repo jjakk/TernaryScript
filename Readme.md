@@ -14,15 +14,15 @@ To run your program, type into terminal or command prompt in the directory of th
 ## Print
 Print plain text
 ```
-PRINT|Hello World
+PRINT:STATIC|Hello World
 ```
 Print newline `\n` character
 ```
-PRINT_NEW_LINE
+PRINT:NEW_LINE
 ```
-Print variable
+Print a variable's value
 ```
-PRINT_VARIABLE|variable_name
+PRINT:VARIABLE|variable_name
 ```
 ## Variables
 Create a variable
