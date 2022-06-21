@@ -54,11 +54,11 @@ int parse(Line line){
             printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);
             return 1;
         }
-    } else if(strcmp(operation, "PRINT") == 0){
+    } else if(strcmp(operation, "PRINT:STATIC") == 0){
         printDefault(line);
-    } else if(strcmp(operation, "PRINT_NEW_LINE") == 0){
+    } else if(strcmp(operation, "PRINT:NEW_LINE") == 0){
         printNewLine();
-    } else if(strcmp(operation, "PRINT_VARIABLE") == 0){
+    } else if(strcmp(operation, "PRINT:VARIABLE") == 0){
         if(printVariable(line) == 1){
             printf("\nERROR: Invalid variable `%s` on Line #%i\n", line.secondOperand, line.number);
             return 1;
