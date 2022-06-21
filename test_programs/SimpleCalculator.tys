@@ -1,0 +1,12 @@
+CREATE_VARIABLE|firstNum|0.0
+CREATE_VARIABLE|secondNum|0.0
+PRINT|This is a basic addition calculator app
+PRINT_NEW_LINE
+PRINT|Enter first number: 
+INPUT_VARIABLE|firstNum
+PRINT|Enter second number: 
+INPUT_VARIABLE|secondNum
+MODIFY_VARIABLE:ADD:VARIABLE|firstNum|secondNum
+PRINT||The sum of those two numbers is 
+PRINT_VARIABLE|firstNum
+PRINT_NEW_LINE
