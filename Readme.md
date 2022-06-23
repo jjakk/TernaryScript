@@ -63,7 +63,7 @@ To comment a line of code, simply start the line with `//` like so
 //PRINT|Hello World
 ```
 # Examples
-## Basic addition calculator
+## Addition calculator
 This demo app takes in two decimal numbers and adds them
 ```
 // Declare two decimals to store user input
