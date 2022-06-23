@@ -66,14 +66,19 @@ To comment a line of code, simply start the line with `//` like so
 ## Basic addition calculator
 This demo app takes in two decimal numbers and adds them
 ```
+// Declare two decimals to store user input
 CREATE_VARIABLE|firstNum|0.0
 CREATE_VARIABLE|secondNum|0.0
+
+// Prompt the user for the two numbers
 PRINT:STATIC|This is a basic addition calculator app
 PRINT:NEW_LINE
 PRINT:STATIC|Enter first number: 
 INPUT_VARIABLE|firstNum
 PRINT:STATIC|Enter second number: 
 INPUT_VARIABLE|secondNum
+
+// Add the values and return the result
 MODIFY_VARIABLE:ADD:VARIABLE|firstNum|secondNum
 PRINT:STATIC|The sum of those two numbers is 
 PRINT:VARIABLE|firstNum
