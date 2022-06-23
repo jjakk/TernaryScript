@@ -62,3 +62,20 @@ To comment a line of code, simply start the line with `//` like so
 ```
 //PRINT|Hello World
 ```
+# Examples
+## Basic addition calculator
+This demo app takes in two decimal numbers and adds them
+```
+CREATE_VARIABLE|firstNum|0.0
+CREATE_VARIABLE|secondNum|0.0
+PRINT:STATIC|This is a basic addition calculator app
+PRINT:NEW_LINE
+PRINT:STATIC|Enter first number: 
+INPUT_VARIABLE|firstNum
+PRINT:STATIC|Enter second number: 
+INPUT_VARIABLE|secondNum
+MODIFY_VARIABLE:ADD:VARIABLE|firstNum|secondNum
+PRINT:STATIC|The sum of those two numbers is 
+PRINT:VARIABLE|firstNum
+PRINT:NEW_LINE
+```
