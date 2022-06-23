@@ -1,8 +1,9 @@
+#include "Operation.c"
 
 typedef struct Line{
     int number;
-    char firstOperand[LINE_MAX_LENGTH];
-    char secondOperand[LINE_MAX_LENGTH];
-    char thirdOperand[LINE_MAX_LENGTH];
+    Operation operation;
+    char secondParameter[LINE_MAX_LENGTH];
+    char thirdParameter[LINE_MAX_LENGTH];
 } Line;
 

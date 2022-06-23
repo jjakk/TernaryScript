@@ -1,17 +1,17 @@
 
 int setVariableStatic(Line line){
-    char *variableName = line.secondOperand;
-    int variableNewType = determineType(line.thirdOperand);
-    Variable *variable = getVariable(line.secondOperand);
+    char *variableName = line.secondParameter;
+    int variableNewType = determineType(line.thirdParameter);
+    Variable *variable = getVariable(line.secondParameter);
     if(variable == pRootVariable) return 1;
     variable->type = variableNewType;
-    strcpy(variable->value, line.thirdOperand);
+    strcpy(variable->value, line.thirdParameter);
     return 0;
 }
 
 int setVariableVariable (Line line){
-    char *firstVariableName = line.secondOperand;
-    char *secondVariableName = line.thirdOperand;
+    char *firstVariableName = line.secondParameter;
+    char *secondVariableName = line.thirdParameter;
     Variable *firstVariable = getVariable(firstVariableName);
     Variable *secondVariable = getVariable(secondVariableName);
     if(firstVariable == pRootVariable){

@@ -1,6 +1,6 @@
 
 void printDefault(Line line){
-    printf("%s", line.secondOperand);
+    printf("%s", line.secondParameter);
 }
 
 void printNewLine(){
@@ -8,7 +8,7 @@ void printNewLine(){
 }
 
 int printVariable(Line line){
-    char *variableName = line.secondOperand;
+    char *variableName = line.secondParameter;
     Variable *variable = getVariable(variableName);
     if(variable == pRootVariable) return 1;
     printf("%s", variable->value);

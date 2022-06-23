@@ -6,12 +6,12 @@ int isFloat(char value[LINE_MAX_LENGTH]);
 int isDigit(char character);
 
 void createVariable(Line line){
-    char *variableName = line.secondOperand;
-    int variableType = determineType(line.thirdOperand);
+    char *variableName = line.secondParameter;
+    int variableType = determineType(line.thirdParameter);
     Variable newVariable = {
         variableName,
         variableType,
-        line.thirdOperand,
+        line.thirdParameter,
         NULL
     };
     appendVariable(newVariable);
