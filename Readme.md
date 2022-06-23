@@ -33,7 +33,6 @@ Take user input and store to a variable
 ```
 INPUT_VARIABLE|variable_name
 ```
-### Modification
 Set a variable equal to a static value
 ```
 MODIFY_VARIABLE:SET:STATIC|variable_name|new_value
