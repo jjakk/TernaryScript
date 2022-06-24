@@ -1,9 +1,17 @@
-
 int determineType(char value[LINE_MAX_LENGTH]);
 int isBoolean(char value[LINE_MAX_LENGTH]);
 int isInt(char value[LINE_MAX_LENGTH]);
 int isFloat(char value[LINE_MAX_LENGTH]);
 int isDigit(char character);
+void createVariable(Line line);
+
+int checkCreateVariable(Line line){
+    if(strcmp(line.operation.firstParameter, "CREATE_VARIABLE") == 0){
+        createVariable(line);
+        return 0;
+    }
+    return 2;
+}
 
 void createVariable(Line line){
     char *variableName = line.secondParameter;
