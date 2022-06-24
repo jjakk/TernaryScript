@@ -5,12 +5,12 @@ typedef struct Operation {
     char thirdParameter[LINE_MAX_LENGTH];
 } Operation;
 
-char *operationToString(Operation opeartion){
+char *operationToString(Operation operation){
     char *output;
 
-    char *op1 = opeartion.firstParameter;
-    char *op2 = opeartion.secondParameter;
-    char *op3 = opeartion.thirdParameter;
+    char *op1 = operation.firstParameter;
+    char *op2 = operation.secondParameter;
+    char *op3 = operation.thirdParameter;
 
     char firstDivider;
     char secondDivider;
@@ -19,7 +19,7 @@ char *operationToString(Operation opeartion){
 
     if(strcmp(op2, "") != 0) secondDivider = OPERATION_DIVIDING_CHARACTER;
 
-    strcat(output, opeartion.firstParameter);
+    strcat(output, operation.firstParameter);
     sprintf(
         output,
         "%s%c%s%c%s",
