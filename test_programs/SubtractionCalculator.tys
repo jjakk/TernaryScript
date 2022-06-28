@@ -1,0 +1,12 @@
+CREATE_VARIABLE|firstNum|0.0
+CREATE_VARIABLE|secondNum|0.0
+PRINT:STATIC|This is a basic addition calculator app
+PRINT:NEW_LINE
+PRINT:STATIC|Enter first number: 
+INPUT_VARIABLE|firstNum
+PRINT:STATIC|Enter second number: 
+INPUT_VARIABLE|secondNum
+MODIFY_VARIABLE:SUBTRACT:VARIABLE|firstNum|secondNum
+PRINT:STATIC|The difference of those two numbers is 
+PRINT:VARIABLE|firstNum
+PRINT:NEW_LINE
