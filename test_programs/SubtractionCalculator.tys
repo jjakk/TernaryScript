@@ -1,6 +1,6 @@
 CREATE_VARIABLE|firstNum|0.0
 CREATE_VARIABLE|secondNum|0.0
-PRINT:STATIC|This is a basic addition calculator app
+PRINT:STATIC|This is a basic subtraction calculator app
 PRINT:NEW_LINE
 PRINT:STATIC|Enter first number: 
 INPUT_VARIABLE|firstNum
